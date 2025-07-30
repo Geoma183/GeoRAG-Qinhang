@@ -14,20 +14,6 @@ LLM Integration – Generate answers using retrieval-augmented large language mo
 
 🧠 Built with modularity and extensibility in mind: you can easily replace the corpus and apply the method to other metallogenic belts or geoscientific domains.
 
-📦 Project Structure
-GeoRAG-Qinhang/
-├── data/                       # QA dataset and example inputs
-├── outputs/                    # Generated vector stores or results
-├── src/                        # Core modules (1-4 stages)
-│   ├── 1_pdf_to_txt.py         # Extract raw text from PDFs
-│   ├── 2_txt_to_vector.py      # Build vector database from QA corpus
-│   ├── 3_retrieval.py          # Semantic retrieval logic
-│   └── 4_rag_generation.py     # LLM integration with RAG
-├── notebooks/                  # Demo notebook for full workflow
-│   └── demo_workflow.ipynb
-├── corpus_qinhang.xlsx         # Sample bilingual QA corpus
-├── requirements.txt            # Python dependencies
-└── README.md                   # Project introduction
 
 🌐 Qinhang Metallogenic Belt Corpus
 The QA corpus includes over 100 bilingual questions and answers related to:
