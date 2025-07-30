@@ -38,7 +38,6 @@ The dataset includes 100+ manually curated QA pairs derived from authoritative g
 🚀 How to Use
 
 # 1. Install required packages
-pip install -r requirements.txt
 
 # 2. Convert PDFs to cleaned text blocks
 python src/1_pdf_to_txt.py
@@ -51,8 +50,7 @@ python src/3_retrieval.py
 
 # 5. Run full RAG-based QA using an LLM
 python src/4_rag_generation.py
-▶️ Or explore the end-to-end process in the Jupyter notebook:
-notebooks/demo_workflow.ipynb
+
 
 🔁 How to Adapt to Other Regions
 This system can be adapted to other metallogenic belts or geoscientific domains (e.g., Tianshan, Qilian) by:
