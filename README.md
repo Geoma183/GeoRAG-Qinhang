@@ -1,66 +1,76 @@
-📚 GeoRAG-Qinhang
-GeoRAG-Qinhang is an open-source, retrieval-augmented generation (RAG) question-answering system for geological domains. This project demonstrates how to build a domain-specific QA pipeline using large language models (LLMs) and semantic vector retrieval, with a case study focused on the Qinhang Metallogenic Belt in South China.
+📚 GeoRAG-Qinhang: Domain QA System for the Qinhang Metallogenic Belt
+GeoRAG-Qinhang is an open-source, retrieval-augmented generation (RAG) question-answering system tailored for geological research. This project integrates domain-specific knowledge from the Qinhang Metallogenic Belt with modern large language models (LLMs), showcasing an end-to-end pipeline for intelligent question answering based on scientific literature.
 
-🔍 Overview
-This repository provides an end-to-end pipeline for domain-specific knowledge engineering and QA generation, including:
+This repository is part of a research submission to Minerals (MDPI) and demonstrates how RAG techniques can be applied to support mineral resource analysis, structural geology interpretation, and exploration decision-making in a specific tectonic setting.
 
-PDF Extraction – Extract and clean geological knowledge from scientific documents.
+🔍 Overview: End-to-End GeoQA Workflow
+This repository offers a fully modular and reproducible pipeline for constructing geological QA systems, including:
 
-Text Embedding – Transform QA pairs into vector representations.
+📄 PDF Parsing – Extract geological knowledge from scientific literature (English and Chinese).
 
-Semantic Retrieval – Retrieve relevant answers from a domain-specific corpus.
+✂️ Text Cleaning & Chunking – Preprocess documents into semantically coherent text blocks.
 
-LLM Integration – Generate answers using retrieval-augmented large language models.
+📊 Vector Embedding – Encode text chunks using multilingual semantic models.
 
-🧠 Built with modularity and extensibility in mind: you can easily replace the corpus and apply the method to other metallogenic belts or geoscientific domains.
+🔍 Semantic Retrieval – Search relevant context using FAISS-based vector databases.
 
+🤖 LLM Answer Generation – Use large language models (e.g., GLM-4) for contextualized QA.
 
-🌐 Qinhang Metallogenic Belt Corpus
-The QA corpus includes over 100 bilingual questions and answers related to:
+The entire system is built for adaptability across languages, domains, and geological regions.
 
-Geological background
+🌐 Qinhang QA Corpus: Structured Geological Knowledge
+To support intelligent question answering, we have developed a high-quality, bilingual (Chinese-English) QA dataset specific to the Qinhang Metallogenic Belt, featuring:
 
-Ore-forming processes
+Geological setting and tectonic framework
 
-Structural settings
+Ore-forming processes and metallogenic stages
 
-Representative ore deposits
+Representative deposits and ore types
 
-Tectonic evolution
+Magmatic and structural controls
 
-Mineral resources and exploration potential
+Crustal evolution and metallogenic events
 
-These are derived from domain literature and are integrated into the RAG system to support intelligent, contextualized responses from LLMs.
+Resource potential and metallogenic zoning
+
+The dataset includes 100+ manually curated QA pairs derived from authoritative geological sources and is fully integrated into the RAG pipeline.
 
 🚀 How to Use
 
-1.Install dependencies:
+# 1. Install required packages
 pip install -r requirements.txt
 
-2.Run PDF to TXT processing:
+# 2. Convert PDFs to cleaned text blocks
 python src/1_pdf_to_txt.py
 
-3.Convert TXT to vector index:
+# 3. Embed text blocks and build FAISS index
 python src/2_txt_to_vector.py
 
-4.Perform semantic retrieval:
+# 4. Perform semantic retrieval
 python src/3_retrieval.py
 
-5.Generate answers via RAG + LLM:
+# 5. Run full RAG-based QA using an LLM
 python src/4_rag_generation.py
-Or use the Jupyter Notebook: notebooks/demo_workflow.ipynb
+▶️ Or explore the end-to-end process in the Jupyter notebook:
+notebooks/demo_workflow.ipynb
 
-🔁 Adaptation to Other Domains
-To apply this system to other regions (e.g., Tianshan, Qilian), simply replace the corpus_qinhang.xlsx file with a new QA dataset, and rerun steps 2–5.
+🔁 How to Adapt to Other Regions
+This system can be adapted to other metallogenic belts or geoscientific domains (e.g., Tianshan, Qilian) by:
+
+Replacing the QA dataset (corpus_qinhang.xlsx) with a new set of domain-specific questions and answers.
+
+Running Steps 2–5 to regenerate the vector index and QA capabilities.
+
+The modular design ensures fast migration with minimal code changes.
 
 📜 Citation & License
-This project is part of a research submission to Minerals (MDPI).
-If you use this project or dataset, please cite accordingly (citation to be added upon acceptance).
+This project supports a manuscript submission to Minerals (MDPI).
+If you use this code or dataset in your research, please cite this repository (citation information will be added upon acceptance).
 
 License: MIT
 
 📫 Contact
-For questions or collaboration inquiries, please contact:
-Jianhua
-Email: 05161935@cumt.edu.cn
+Author: Jianhua
 Institution: Sun Yat-sen University, China
+Email: 05161935@cumt.edu.cn
+
